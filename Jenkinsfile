@@ -36,11 +36,20 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Running my Python App') {
                  steps{
-     			sh './python-app.py' 
+     			echo "Running python.py..."
+                sh '''
+                    source $VENV/bin/activate
+                    python python.py
+                ''' 
 		}
 	}
 }
+post {
+        always {
+            echo "Cleaning up workspace..."
+        }
+    }
 }
 
