@@ -41,7 +41,8 @@ pipeline {
      			echo "Running python.py..."
                 sh '''
                     source $VENV/bin/activate
-                    python python-app.py
+		    nohup python python-app.py > flask.log 2>&1 &
+            	    echo $! > flask.pid
                 ''' 
 		}
 	}
