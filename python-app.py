@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Hello! 🎉 This is a Python Demo Application running with Flask from Dev branch."
+    return "Hello! 🎉 This is a Python Demo Application running with Flask from prod branch."
 
 @app.route("/health")
 def health():
@@ -13,5 +13,5 @@ def health():
 
 if __name__ == "__main__":
     # Run on http://localhost:5000
-    app.run(host="0.0.0.0", port=5100, debug=True)
+    app.run(host="0.0.0.0", port=5200, debug=True)
 
