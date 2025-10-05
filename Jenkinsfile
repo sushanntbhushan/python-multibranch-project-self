@@ -47,16 +47,5 @@ pipeline {
 		}
 	}
 }
-post {
-    always {
-        echo "Stopping Flask app if running..."
-        sh '''
-            if [ -f flask.pid ]; then
-                kill -9 $(cat flask.pid) || true
-                rm -f flask.pid
-            fi
-        '''
-    }
-}
 }
 
