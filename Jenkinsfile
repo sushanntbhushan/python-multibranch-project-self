@@ -41,7 +41,7 @@ pipeline {
      			echo "Running python.py..."
                 sh '''
                     source $VENV/bin/activate
-                    python python.py
+                    python python-app.py
                 ''' 
 		}
 	}
