@@ -39,6 +39,7 @@ pipeline {
         stage('Build') {
                  steps{
      			sh './python-app.py' 
+		}
 	}
 }
 
