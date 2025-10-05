@@ -47,11 +47,6 @@ pipeline {
 	}
 }
 post {
-        always {
-            echo "Cleaning up workspace..."
-        }
-    }
-post {
     always {
         echo "Stopping Flask app if running..."
         sh '''
